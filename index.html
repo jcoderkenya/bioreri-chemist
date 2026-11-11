@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bioreri Pharmacy Ruai | 24/7 Chemist, Prescriptions &amp; Delivery &middot; Motherly Care Rd</title>
+  <meta name="description" content="Bioreri Pharmacy Ruai on Motherly Care Road off Kangundo Road. 24/7 dispensing chemist, authentic doctor prescriptions, infant care, and rapid doorstep delivery across Ruai, Kamulu & Joska." />
+
+  <!-- Open Graph Meta for Social & WhatsApp Sharing -->
+  <meta property="og:title" content="Bioreri Pharmacy Ruai · 24/7 Chemist &amp; Medicine Delivery" />
+  <meta property="og:description" content="Dispensing genuine pharmaceuticals on Motherly Care Road, Ruai. Upload doctor's prescription for rapid dispatch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            med: {
+              navy: '#0B1E28',
+              slate: '#122632',
+              card: '#1A3342',
+              border: '#27475A',
+              teal: '#0D9488',
+              tealDark: '#0F766E',
+              mint: '#14B8A6',
+              soft: '#F0FDFA',
+              emerald: '#10B981',
+              accent: '#0284C7'
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::selection { background-color: #0D9488; color: #FFFFFF; }
+    .glow-teal { box-shadow: 0 0 30px -5px rgba(13, 148, 136, 0.35); }
+    .glow-emerald { box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.35); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-med-teal selection:text-white">
+
+  <!-- TOP EMERGENCY STATUS STRIP -->
+  <aside class="bg-med-navy text-white text-xs py-2 px-4 border-b border-med-border" aria-label="Pharmacy status">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 font-medium">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span><strong>BIORERI PHARMACY RUAI:</strong> Motherly Care Road, Ruai &middot; Open 24 Hours Emergency Chemist</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300 text-[11px] sm:text-xs">
+        <span class="hidden md:inline">100% Certified Genuine Drugs</span>
+        <span class="hidden md:inline">&bull;</span>
+        <span class="hidden md:inline">Fast Delivery: Ruai, Kamulu, Joska, Njiru</span>
+        <span class="hidden md:inline">&bull;</span>
+        <button onclick="triggerWhatsApp('prescription fast consultation')" class="text-med-mint hover:underline font-bold">
+          Send Prescription on WhatsApp
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 shrink-0">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-med-teal to-med-mint flex items-center justify-center text-white font-display font-black text-2xl shadow-md">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-display text-xl sm:text-2xl font-black tracking-tight text-med-navy leading-none">BIORERI</span>
+            <span class="bg-teal-100 text-med-tealDark text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded border border-teal-200">Pharmacy</span>
+          </div>
+          <span class="text-[10px] tracking-widest uppercase text-med-teal font-bold mt-1">Ruai &middot; Motherly Care Road &middot; 24/7</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center space-x-7 text-xs sm:text-sm font-bold text-slate-700">
+        <a href="#prescription-upload" class="hover:text-med-teal transition-colors">Prescriptions</a>
+        <a href="#catalog" class="hover:text-med-teal transition-colors">Medicine &amp; Care</a>
+        <a href="#services" class="hover:text-med-teal transition-colors">24/7 Clinical Services</a>
+        <a href="#delivery" class="hover:text-med-teal transition-colors">Ruai Delivery Zones</a>
+        <a href="#location" class="hover:text-med-teal transition-colors">Motherly Care Rd Location</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="triggerWhatsApp('general pharmacy enquiry')" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-slate-100 hover:bg-slate-200 text-med-navy text-xs font-bold transition-all" aria-label="Consult Pharmacist">
+          <svg class="w-4 h-4 text-emerald-600 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>Chat with Pharmacist</span>
+        </button>
+
+        <button onclick="toggleCartModal()" class="relative p-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-med-navy hover:bg-slate-800 text-white flex items-center gap-2 shadow-sm transition-all" aria-label="View medicine basket">
+          <svg class="w-5 h-5 text-med-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="text-xs font-bold hidden sm:inline">Order Basket</span>
+          <span id="cart-counter" class="bg-med-teal text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-700 hover:text-med-navy" aria-label="Toggle navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
+      <a href="#prescription-upload" onclick="toggleMobileMenu()" class="block text-base font-semibold py-1">Upload Prescription Slip</a>
+      <a href="#catalog" onclick="toggleMobileMenu()" class="block text-base font-semibold py-1">Medicines &amp; Personal Care</a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block text-base font-semibold py-1">24/7 Clinical Screening</a>
+      <a href="#delivery" onclick="toggleMobileMenu()" class="block text-base font-semibold py-1">Ruai Doorstep Delivery Zones</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block text-base font-semibold py-1">Motherly Care Road Location</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <button onclick="triggerWhatsApp('prescription upload'); toggleMobileMenu();" class="w-full py-3 bg-med-teal text-white font-extrabold rounded-xl text-sm flex items-center justify-center gap-2">
+          <span>Upload Prescription on WhatsApp</span>
+        </button>
+        <button onclick="toggleCartModal(); toggleMobileMenu();" class="w-full py-3 bg-slate-100 text-med-navy font-bold rounded-xl text-xs">
+          View Order Basket
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO SECTION -->
+    <section class="relative pt-10 pb-20 md:py-28 bg-gradient-to-b from-med-soft via-white to-slate-100 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Copy -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 border border-teal-200 text-xs font-bold uppercase tracking-wider text-med-tealDark">
+              <span class="w-2 h-2 rounded-full bg-med-teal animate-ping"></span>
+              <span>Motherly Care Road &middot; Ruai, Nairobi 00520</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-med-navy leading-tight">
+              Authentic Medicines. <br class="hidden sm:inline" />
+              Trusted Clinical Care. <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-med-teal to-med-accent">
+                Open 24 Hours in Ruai.
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Serving Ruai, Kamulu, and Kangundo Road residents around the clock. Dispensing batch-verified prescription therapies, pediatric syrups, chronic refill plans, and rapid doorstep delivery with complete patient confidentiality.
+            </p>
+
+            <!-- Fast Prescription Callout Box -->
+            <div id="prescription-upload" class="p-5 rounded-2xl bg-white border border-teal-100 shadow-xl max-w-lg mx-auto lg:mx-0 space-y-3">
+              <div class="flex items-start gap-3 text-left">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-med-teal flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-med-navy block uppercase tracking-wide">Doctor's Prescription Slip?</span>
+                  <span class="text-xs text-slate-500">Take a photo and send via WhatsApp for immediate price confirmation, dosage verification &amp; rider dispatch.</span>
+                </div>
+              </div>
+
+              <button onclick="triggerWhatsApp('prescription photo upload')" class="w-full py-3.5 px-4 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md glow-teal">
+                <span>Send Prescription via WhatsApp</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              </button>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-600 font-semibold">
+              <span class="flex items-center gap-1.5"><span class="text-med-teal font-bold">&check;</span> 100% Genuine Pharmaceuticals</span>
+              <span class="flex items-center gap-1.5"><span class="text-med-teal font-bold">&check;</span> Cold-Chain Vaccine &amp; Insulin Storage</span>
+              <span class="flex items-center gap-1.5"><span class="text-med-teal font-bold">&check;</span> M-Pesa on Delivery</span>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white aspect-[4/5] border-4 border-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" 
+                  alt="Bioreri Pharmacy Ruai Motherly Care Road" 
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-med-navy/85 via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                  <span class="inline-block bg-med-teal text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded">
+                    Open 24/7 Day &amp; Night
+                  </span>
+                  <h3 class="font-display font-extrabold text-xl">Qualified Pharmacist on Duty</h3>
+                  <p class="text-xs text-slate-200">Motherly Care Road, Ruai &middot; Near Motherly Care Hospital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDICINE & HEALTHCARE CATALOGUE -->
+    <section id="catalog" class="py-20 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span class="text-xs font-bold tracking-widest uppercase text-med-teal">Dispensary Stock</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-med-navy">Medicine &amp; Health Categories</h2>
+          <p class="text-xs sm:text-sm text-slate-600">
+            Fully stocked with genuine brand-name and bioequivalent generic medications approved by the Pharmacy and Poisons Board (PPB).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Category 1: Chronic & Prescription -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Prescription and Chronic Medications" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+              <span class="absolute top-3 right-3 bg-med-navy text-white text-[10px] font-bold px-2 py-0.5 rounded">Rx Prescription</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">Chronic Care &amp; Prescription Refills</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Monthly prescription refills for hypertension (Losartan, Amlodipine), diabetes (Metformin, Glimepiride), asthma inhalers (Salbutamol, Seretide), and cardiac therapies.
+                </p>
+              </div>
+              <button onclick="addToCart('Chronic Prescription Refill Service', 1500)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Add Refill Inquiry to Basket
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 2: Cold, Cough & Pain -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=600&q=80" alt="Cold, Cough and Pain Relief" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+              <span class="absolute top-3 right-3 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">Fast Relief</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">Pain Relief, Cold &amp; Allergies</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Analgesics (Paracetamol, Ibuprofen, Diclofenac), adult &amp; pediatric cough syrups (Ascoril, Benylin), antihistamines (Cetirizine), and saline nasal sprays.
+                </p>
+              </div>
+              <button onclick="addToCart('Cold & Pain Relief Pack', 850)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Add Pain &amp; Cold Pack (KSh 850)
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 3: Mother & Baby -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80" alt="Mother and Baby Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+              <span class="absolute top-3 right-3 bg-med-navy text-white text-[10px] font-bold px-2 py-0.5 rounded">Pediatric</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">Mother, Infant &amp; Baby Essentials</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Infant formulas (NAN, Lactogen, Aptamil), colic drops (Infacol, Bonnisan), zinc sulfate, oral rehydration salts, teething gel, and diapers.
+                </p>
+              </div>
+              <button onclick="addToCart('Infant Care & Colic Relief Kit', 1200)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Add Infant Kit (KSh 1,200)
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 4: First Aid & Wound Dressing -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=600&q=80" alt="First Aid Supplies" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">First Aid &amp; Wound Dressing</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Antiseptics (Betadine, Dettol, Surgical Spirit), sterile gauze swabs, crepe bandages, micropore surgical tape, burn creams, and digital thermometers.
+                </p>
+              </div>
+              <button onclick="addToCart('Complete Home First Aid Kit', 1650)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Add First Aid Kit (KSh 1,650)
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 5: Vitamins & Immunity -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=600&q=80" alt="Vitamins and Supplements" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">Daily Vitamins &amp; Immunity Boosters</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Effervescent Vitamin C + Zinc, Omega-3 fish oils, Calcium + Vitamin D3 for bone strength, maternal prenatal multivitamin capsules, and energy syrups.
+                </p>
+              </div>
+              <button onclick="addToCart('Immunity Booster Vitamin Pack', 950)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Add Vitamin Pack (KSh 950)
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 6: Confidential Wellness -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+            <div class="h-48 overflow-hidden relative bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Personal and Discreet Healthcare" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+              <span class="absolute top-3 right-3 bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">100% Confidential</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-xl font-bold text-med-navy">Confidential Personal Wellness</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                  Family planning, emergency contraception, rapid pregnancy test cassettes, ovulation test strips, and intimate hygiene products packed in plain, unlabelled bags.
+                </p>
+              </div>
+              <button onclick="addToCart('Discreet Wellness Order', 600)" class="w-full py-2.5 bg-med-teal hover:bg-med-tealDark text-white font-bold rounded-xl text-xs transition-colors shadow-sm">
+                + Order with Plain Packaging
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 24/7 IN-STORE CLINICAL SCREENING -->
+    <section id="services" class="py-20 bg-med-soft border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="text-xs font-bold tracking-widest uppercase text-med-tealDark">Walk-In Primary Care</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-med-navy">Clinical Wellness Checks</h2>
+          <p class="text-xs sm:text-sm text-slate-600">
+            Walk into our Motherly Care Road store any time of day or night for quick routine diagnostic monitoring.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <span class="text-3xl">🩺</span>
+            <h4 class="font-display font-bold text-med-navy text-base">Blood Pressure (BP)</h4>
+            <p class="text-xs text-slate-600">Free accurate digital blood pressure measurement with lifestyle guidance.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <span class="text-3xl">🩸</span>
+            <h4 class="font-display font-bold text-med-navy text-base">Blood Glucose (RBS)</h4>
+            <p class="text-xs text-slate-600">Instant finger-prick random blood sugar test for diabetes monitoring.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <span class="text-3xl">💨</span>
+            <h4 class="font-display font-bold text-med-navy text-base">Emergency Nebulization</h4>
+            <p class="text-xs text-slate-600">Rapid respiratory relief for acute asthma and bronchospasm attacks.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
+            <span class="text-3xl">⚖️</span>
+            <h4 class="font-display font-bold text-med-navy text-base">BMI &amp; Weight Tracking</h4>
+            <p class="text-xs text-slate-600">Body Mass Index screening and personalized nutritional counseling.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCAL DOORSTEP DELIVERY ZONES (RUAI CORRIDOR) -->
+    <section id="delivery" class="py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-5">
+            <span class="text-xs font-bold tracking-widest uppercase text-med-teal">Rapid Boda Dispatch</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-med-navy leading-tight">
+              Medicine Delivered to Your Gate in Ruai &amp; Along Kangundo Road.
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              When you are unwell, you shouldn't have to walk in search of a chemist. Our dedicated delivery riders bring your medications sealed, temperature-protected, and discreetly packaged directly to your home.
+            </p>
+
+            <div class="space-y-3 pt-2 text-xs">
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-slate-800 block">Motherly Care Road &amp; Ruai Town Center</span>
+                  <span class="text-slate-500 text-[11px]">Immediate area dispatch</span>
+                </div>
+                <span class="text-emerald-700 font-bold bg-emerald-100 px-2.5 py-1 rounded">15&ndash;25 Mins</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-slate-800 block">Quickmart Ruai, Sewage &amp; Githunguri Axis</span>
+                  <span class="text-slate-500 text-[11px]">Residential estates</span>
+                </div>
+                <span class="text-emerald-700 font-bold bg-emerald-100 px-2.5 py-1 rounded">20&ndash;35 Mins</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-slate-800 block">Kamulu, Joska, Stage 26 &amp; Njiru</span>
+                  <span class="text-slate-500 text-[11px]">Kangundo Road delivery run</span>
+                </div>
+                <span class="text-med-navy font-bold bg-slate-200 px-2.5 py-1 rounded">30&ndash;45 Mins</span>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button onclick="triggerWhatsApp('doorstep medicine delivery request')" class="inline-flex items-center gap-2 text-xs font-bold text-med-teal hover:underline">
+                <span>Request immediate delivery to your location on WhatsApp &rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Safe Delivery Guarantee Card -->
+          <div class="lg:col-span-6 bg-med-navy text-white p-8 sm:p-10 rounded-3xl space-y-6 shadow-xl border border-slate-800">
+            <h3 class="font-display text-2xl font-bold">Safe Medicine Guarantee</h3>
+            <ul class="space-y-3.5 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <span class="text-med-mint font-bold text-base">&check;</span>
+                <span><strong>No Tampered Seals:</strong> Every medicine box is inspected and sealed before rider handoff.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-med-mint font-bold text-base">&check;</span>
+                <span><strong>Clear Dosage Instructions:</strong> Handwritten and typed schedule slips on how and when to take your doses.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-med-mint font-bold text-base">&check;</span>
+                <span><strong>Cold-Chain Insulated Bags:</strong> Insulins, vaccines, and liquid antibiotics kept at required chilled temperatures.</span>
+              </li>
+            </ul>
+
+            <div class="pt-2">
+              <button onclick="triggerWhatsApp('prescription delivery')" class="w-full py-3 bg-gradient-to-r from-med-teal to-med-mint text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md glow-teal">
+                Order Delivery via WhatsApp
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXACT GOOGLE MAPS LOCATION & DETAILS -->
+    <section id="location" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-bold tracking-widest uppercase text-med-teal">Find Our Chemist</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-med-navy">Motherly Care Road, Ruai</h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Bioreri Pharmacy is situated in Ruai on Motherly Care Road, just off the busy Kangundo Road corridor. Conveniently accessible for walk-ins and ambulance/emergency stops 24 hours a day.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="p-4 rounded-xl bg-white border border-slate-200">
+                <span class="text-xs text-slate-400 block uppercase font-bold">Physical Address (Google Maps)</span>
+                <p class="text-sm font-bold text-med-navy mt-1">Motherly Care Road, Ruai</p>
+                <p class="text-xs text-slate-500">Nairobi &ndash; Postal Code: 00520 &middot; Kenya</p>
+                <p class="text-xs text-slate-500 mt-1">Landmark: Along Motherly Care Road near Motherly Care Hospital / Ruai junction</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white border border-slate-200">
+                <span class="text-xs text-slate-400 block uppercase font-bold">Pharmacist Consultation &amp; Orders</span>
+                <p class="text-sm font-bold text-med-navy mt-1">Direct WhatsApp &amp; In-Store Desk</p>
+                <p class="text-xs text-slate-500">Available 24/7 for prescription pricing, chronic orders, and deliveries</p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-4">
+              <a href="https://maps.google.com/?q=Motherly+Care+Road,+Ruai,+Nairobi" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl border border-slate-300 hover:border-slate-500 bg-white text-med-navy text-xs font-bold transition-colors">
+                Open in Google Maps
+              </a>
+              <button onclick="triggerWhatsApp('directions to Bioreri Pharmacy Motherly Care Road')" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors">
+                Request Location Pin on WhatsApp
+              </button>
+            </div>
+          </div>
+
+          <!-- Operating Hours & Night Service -->
+          <div class="lg:col-span-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="font-display text-2xl font-bold text-med-navy mb-6 pb-3 border-b border-slate-100 flex items-center justify-between">
+              <span>Operating Hours</span>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">24/7 Active</span>
+            </h3>
+            
+            <div class="space-y-3.5 text-sm">
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-600 font-semibold">Monday &ndash; Friday</span>
+                <span class="text-emerald-700 font-extrabold">Open 24 Hours (Day &amp; Night)</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-t border-slate-100">
+                <span class="text-slate-600 font-semibold">Saturday</span>
+                <span class="text-emerald-700 font-extrabold">Open 24 Hours</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-t border-slate-100">
+                <span class="text-slate-600 font-semibold">Sunday &amp; Public Holidays</span>
+                <span class="text-emerald-700 font-extrabold">Open 24 Hours</span>
+              </div>
+            </div>
+
+            <div class="mt-8 p-4 rounded-xl bg-teal-50 border border-teal-200 text-xs text-med-tealDark leading-relaxed">
+              <strong>Night Window Service:</strong> Ring the secure night bell after 10:00 PM for rapid emergency medicine dispensing and consultation with the licensed pharmacist on duty.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-med-navy text-slate-400 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <span class="font-display text-lg font-black text-white">BIORERI PHARMACY RUAI</span>
+          <p class="leading-relaxed">
+            Registered 24-hour dispensing chemist and healthcare provider on Motherly Care Road, Ruai, Nairobi 00520.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white uppercase text-[11px] block">Dispensary Wings</span>
+          <ul class="space-y-1 text-slate-400">
+            <li>Doctor Prescription Refills</li>
+            <li>Cold, Cough &amp; Pain Management</li>
+            <li>Mother &amp; Infant Nutrition</li>
+            <li>First Aid &amp; Surgical Supplies</li>
+            <li>Daily Vitamins &amp; Wellness</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white uppercase text-[11px] block">Location &amp; Delivery</span>
+          <p class="leading-relaxed text-slate-400">
+            Motherly Care Road, Ruai<br />
+            Nairobi &ndash; 00520, Kenya<br /><br />
+            Doorstep riders active across Ruai, Kamulu, Joska, and Njiru.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white uppercase text-[11px] block">Emergency Inquiries</span>
+          <p class="leading-relaxed text-slate-400">
+            Send your prescription slip or inquire about medicine prices directly via WhatsApp.
+          </p>
+          <div class="pt-1">
+            <button onclick="triggerWhatsApp('prescription inquiry')" class="px-4 py-2 bg-med-slate hover:bg-slate-700 text-med-mint border border-slate-700 rounded-lg text-xs font-bold">
+              WhatsApp Pharmacist
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-slate-800 text-center text-slate-500 text-[11px]">
+        &copy; <span id="current-year"></span> Bioreri Pharmacy Ruai. Licensed dispensing chemist under Pharmacy and Poisons Board standards.
+      </div>
+    </div>
+  </footer>
+
+  <!-- BASKET & M-PESA STK PUSH CHECKOUT DRAWER -->
+  <div id="cart-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-7 shadow-2xl relative max-h-[92vh] flex flex-col border border-slate-200">
+      
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div>
+          <h2 id="cart-heading" class="font-display text-xl sm:text-2xl font-bold text-med-navy">Your Medicine Basket</h2>
+          <p class="text-xs text-slate-500">Review selected items &amp; arrange delivery</p>
+        </div>
+        <button onclick="toggleCartModal()" class="text-slate-400 hover:text-slate-600 p-2" aria-label="Close basket">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cart-items" class="overflow-y-auto flex-1 space-y-2.5 py-4 pr-1 text-xs sm:text-sm">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="border-t border-slate-200 pt-3 space-y-3">
+        <div class="flex justify-between items-center text-sm font-bold text-med-navy">
+          <span>Estimated Total:</span>
+          <span id="cart-total" class="text-lg font-display font-black text-med-tealDark">KSh 0</span>
+        </div>
+
+        <!-- M-PESA STK PUSH (DARAJA INTEGRATION) -->
+        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-med-navy flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Pay via M-Pesa (Instant STK Push)
+            </span>
+            <span class="text-[10px] text-slate-500 font-mono">Daraja STK</span>
+          </div>
+          <input 
+            type="tel" 
+            id="mpesa-phone" 
+            placeholder="M-Pesa phone number (e.g. 0712 345 678)"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-med-teal font-medium" 
+            aria-label="M-Pesa phone number"
+          />
+          <button 
+            type="button"
+            onclick="payWithMpesa(event)"
+            class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors shadow-sm"
+          >
+            Pay KSh <span id="mpesa-amount">0</span> with M-Pesa
+          </button>
+          <p class="text-[10px] text-slate-500 text-center leading-tight">
+            An M-Pesa prompt will appear on your phone. Enter your PIN to complete your medicine payment.
+          </p>
+        </div>
+
+        <!-- WhatsApp Checkout Fallback -->
+        <button 
+          type="button"
+          onclick="checkoutViaWhatsApp()" 
+          class="w-full py-2.5 bg-med-navy hover:bg-slate-800 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 transition-all shadow-md"
+        >
+          <span>Send Order &amp; Delivery Location to WhatsApp</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <aside aria-label="Quick WhatsApp contact">
+    <button onclick="triggerWhatsApp('urgent prescription consultation')" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-2xl flex items-center gap-2 transition-all transform hover:scale-105 glow-emerald" aria-label="WhatsApp Bioreri Pharmacy">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <span class="hidden sm:inline font-bold text-xs tracking-wide">WhatsApp Pharmacist</span>
+    </button>
+  </aside>
+
+  <!-- TOAST FEEDBACK NOTIFICATION -->
+  <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-med-navy text-white text-xs px-5 py-3 rounded-full shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 border border-med-teal">
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <!-- JAVASCRIPT: PHARMACY CART, M-PESA & WHATSAPP LOGIC -->
+  <script>
+    // =========================================================================
+    // CONFIGURATION
+    // Set your Cloudflare Worker URL and phone for WhatsApp routing when deploying
+    // =========================================================================
+    const WORKER_URL = 'https://YOUR-WORKER.your-subdomain.workers.dev';
+    const STORE_PHONE = ''; // In production, add international number e.g. '2547XXXXXXXX'
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    let cart = [];
+    try {
+      const saved = localStorage.getItem('bioreri_cart');
+      if (saved) cart = JSON.parse(saved);
+    } catch(e) { cart = []; }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    function toggleCartModal() {
+      document.getElementById('cart-modal').classList.toggle('hidden');
+    }
+
+    function saveCart() {
+      try { localStorage.setItem('bioreri_cart', JSON.stringify(cart)); } catch(e){}
+    }
+
+    function addToCart(title, price) {
+      const existing = cart.find(i => i.title === title);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ title, price, qty: 1 });
+      }
+      saveCart();
+      updateCartUI();
+      showToast(`Added "${title}" to your medicine basket!`);
+    }
+
+    function changeQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      saveCart();
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const counter = document.getElementById('cart-counter');
+      const container = document.getElementById('cart-items');
+      const totalEl = document.getElementById('cart-total');
+      const mpesaAmount = document.getElementById('mpesa-amount');
+
+      const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+      const grandTotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+      counter.textContent = totalItems;
+      totalEl.textContent = `KSh ${grandTotal.toLocaleString()}`;
+      if (mpesaAmount) mpesaAmount.textContent = grandTotal.toLocaleString();
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 space-y-2">
+            <p class="text-slate-400 text-xs">Your medicine basket is currently empty.</p>
+            <p class="text-[11px] text-slate-500">Add medications or health kits from the catalogue to order via M-Pesa or WhatsApp.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, i) => `
+        <div class="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-200 gap-3">
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-xs text-med-navy truncate">${item.title}</h4>
+            <span class="text-[10px] text-slate-500">Unit: KSh ${item.price.toLocaleString()}</span>
+            <div class="text-[11px] font-bold text-med-tealDark mt-0.5">Line: KSh ${(item.price * item.qty).toLocaleString()}</div>
+          </div>
+
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="changeQty(${i}, -1)" class="w-6 h-6 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold flex items-center justify-center text-xs" aria-label="Decrease quantity">-</button>
+            <span class="font-bold text-xs w-4 text-center text-slate-800">${item.qty}</span>
+            <button onclick="changeQty(${i}, 1)" class="w-6 h-6 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold flex items-center justify-center text-xs" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // M-Pesa STK Push
+    async function payWithMpesa(ev) {
+      const phoneInput = document.getElementById('mpesa-phone').value.trim();
+      const amount = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+      if (!phoneInput || amount <= 0) {
+        showToast('Please enter your M-Pesa phone number and add at least one item.');
+        return;
+      }
+
+      let phone = phoneInput.replace(/\s+/g, '');
+      if (phone.startsWith('0')) phone = '254' + phone.slice(1);
+      if (phone.startsWith('+')) phone = phone.slice(1);
+      if (!phone.startsWith('254')) phone = '254' + phone;
+
+      const btn = ev.target.closest('button');
+      const original = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Sending M-Pesa prompt...';
+
+      try {
+        const res = await fetch(WORKER_URL + '/pay', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, amount, note: 'Bioreri Pharmacy Ruai Order' })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast(data.message || 'Check your phone for the M-Pesa prompt.');
+          btn.textContent = 'Prompt sent — check your phone';
+          setTimeout(() => { toggleCartModal(); btn.disabled = false; btn.innerHTML = original; }, 3000);
+        } else {
+          showToast('Payment failed: ' + (data.message || 'try again'));
+          btn.disabled = false; btn.innerHTML = original;
+        }
+      } catch (e) {
+        showToast('Could not reach the payment server.');
+        btn.disabled = false; btn.innerHTML = original;
+      }
+    }
+
+    // WhatsApp Router
+    function triggerWhatsApp(subject) {
+      const msg = `Hello Bioreri Pharmacy Ruai (Motherly Care Road), I have an inquiry regarding: ${subject}.`;
+      if (!STORE_PHONE || STORE_PHONE.trim() === '') {
+        showToast(`WhatsApp message ready: "${msg}"`);
+      } else {
+        window.open(`https://wa.me/${STORE_PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+      }
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        showToast("Your medicine basket is empty!");
+        return;
+      }
+
+      let msg = "Hello Bioreri Pharmacy Ruai (Motherly Care Road),\n\nI would like to place an order for the following items:\n\n";
+      let total = 0;
+
+      cart.forEach((item, idx) => {
+        const line = item.price * item.qty;
+        total += line;
+        msg += `${idx + 1}. ${item.title} x${item.qty} = KSh ${line.toLocaleString()}\n`;
+      });
+
+      msg += `\nEstimated Total: KSh ${total.toLocaleString()}`;
+      msg += "\n\nPlease confirm stock availability and advise on rider delivery time to my gate in Ruai/Kamulu.";
+
+      if (!STORE_PHONE || STORE_PHONE.trim() === '') {
+        showToast(`Order formatted for WhatsApp (${total.toLocaleString()} KSh)`);
+        console.log(msg);
+      } else {
+        window.open(`https://wa.me/${STORE_PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3500);
+    }
+
+    // Initialize UI on load
+    updateCartUI();
+  </script>
+</body>
+</html>
